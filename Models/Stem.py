@@ -161,7 +161,7 @@ class Stem:
                     c.grow(self.age)
 
                 ## New Leaves
-                leafPace += 1
+                Stem.leafPace += 1
                 if (self.vite > 20) and (not self.branches):
                     if (leafPace % 12 == 0):
                         self.leaves.append(l.Leaf())
