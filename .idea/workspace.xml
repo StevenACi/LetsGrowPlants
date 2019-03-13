@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="292015d9-6e00-431a-9b9f-489550d658ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SaveData/FSave/SaverTemp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Branch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Leaf.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Leaf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Root.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Root.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Stem.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Stem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaveData/FSave/SavePlant.py" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData/FSave/SavePlant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveData/branch.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData/branch.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveData/branchchildren.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveData/root.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData/root.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveData/rootchildren.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveData/stem.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData/stem.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +40,7 @@
               <entry file="file://$PROJECT_DIR$/ScratchLog">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="357">
-                    <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                    <caret line="21" selection-start-line="21" selection-end-line="21" />
                   </state>
                 </provider>
               </entry>
@@ -62,17 +55,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="442">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SaveData/FSave/SavePlant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="411">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -95,17 +88,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Root.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+            <state relative-caret-position="1122">
+              <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Models/Stem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1">
+              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="e#52#82#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/Stem.py">
+        <entry file="file://$PROJECT_DIR$/Models/Branch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="174" column="77" selection-start-line="174" selection-start-column="77" selection-end-line="174" selection-end-column="77" />
+            <state relative-caret-position="78">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#52#82#0" expanded="true" />
               </folding>
@@ -148,6 +153,7 @@
       <find>a</find>
       <find>age</find>
       <find>print</find>
+      <find>growChild</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,12 +187,13 @@
         <option value="$PROJECT_DIR$/Config/save.json" />
         <option value="$PROJECT_DIR$/Config/SaveData.py" />
         <option value="$PROJECT_DIR$/Config/SavePlant.py" />
-        <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/Models/Leaf.py" />
         <option value="$PROJECT_DIR$/Models/Root.py" />
         <option value="$PROJECT_DIR$/SaveData/FSave/SaverTemp.py" />
-        <option value="$PROJECT_DIR$/Models/Stem.py" />
         <option value="$PROJECT_DIR$/SaveData/FSave/SavePlant.py" />
+        <option value="$PROJECT_DIR$/game.py" />
+        <option value="$PROJECT_DIR$/Models/Branch.py" />
+        <option value="$PROJECT_DIR$/Models/Stem.py" />
       </list>
     </option>
   </component>
@@ -247,7 +254,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="D:/Steve/Sirt_Device_Hub" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -377,8 +384,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294347" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34405458" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39961013" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.71929824" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.26705652" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32981783" />
@@ -547,7 +554,7 @@
     <entry file="file://$PROJECT_DIR$/ScratchLog">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -568,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SaveData/FSave/SaverTemp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -582,23 +582,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Stem.py">
+    <entry file="file://$PROJECT_DIR$/SaveData/branch.pickle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveData/FSave/SavePlant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="174" column="77" selection-start-line="174" selection-start-column="77" selection-end-line="174" selection-end-column="77" />
+        <state relative-caret-position="411">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Root.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Branch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#52#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaveData/branch.pickle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Root.py">
+    <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+        <state relative-caret-position="442">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -612,12 +629,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaveData/FSave/SavePlant.py">
+    <entry file="file://$PROJECT_DIR$/Models/Stem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="1">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#52#82#0" expanded="true" />
           </folding>
         </state>
       </provider>

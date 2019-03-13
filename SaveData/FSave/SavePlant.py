@@ -48,9 +48,9 @@ def branchrecursion(branchatts, recursedbranch, parentbranch):
     branchatts[0] += str(recursedbranch.vite) + ","
     branchatts[1] += str(recursedbranch.height) + ","
     branchatts[2] += str(recursedbranch.name) + ","
-    branchatts[3] += str(parentbranch) + ","
+    branchatts[3] += str(parentbranch.name) + ","
     for c in recursedbranch.branches:
-        branchatts = branchrecursion(branchatts, c, recursedbranch.name)
+        branchatts = branchrecursion(branchatts, c, recursedbranch)
 
     return branchatts
 
@@ -61,15 +61,8 @@ def saveBranches(plant):
     print(plant.branches)
 
     for b in plant.branches:
-        print(b)
-        branchAtts[0] += str(b.vite) + ","
-        branchAtts[1] += str(b.height) + ","
-        branchAtts[2] += str(b.name) + ","
-        branchAtts[3] += str(b.name) + ","
-        if len(b.branches)>0:
-            for bb in b.branches:
-
-                branchAtts = branchrecursion(branchAtts, bb, b.name)
+        print (b.branches)
+        branchAtts = branchrecursion(branchAtts, b, b)
 
     branchSave['Vitalities'] = branchAtts[0]
     branchSave['Heights'] = branchAtts[1]

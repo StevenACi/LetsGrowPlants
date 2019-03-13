@@ -29,7 +29,7 @@ def main():
   elapsedTime = round(timeframe(),0)
 
   plant.update()
-  SavePlant.save(plant)
+  #SavePlant.save(plant)
 
   print(plant)
   ##print(elapsedTime)
