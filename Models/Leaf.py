@@ -24,28 +24,35 @@ class Leaf:
  energy = 0
  entropyfactor = 0
  entropy = 0
- def calcDrain(self):
-  self.waterDrain = self.mass * (self.vite/10)
-
-  return self.waterDrain
-
 
  def entropy(self):
   ## We will do something to this to represent decay of plant. May be negligible ##
   ## partial to the vitality ##
   self.entropy = 0
   ####
+ ## Calculation Functions ##
+ def calcDrain(self):
+  self.waterDrain = self.mass * (self.vite/10)
+  return self.waterDrain
+
+ def calcVol(self):
+  self.volume = (self.x * self.z * self.y)
+  return self.volume
+
+ def calcMass(self):
+  self.mass = (self.x * self.z * self.y) * self.massConst
+  return self.mass
 
  def calcGravity(self):
-  self.gravforce = g.calcGravity(self.mass)
+  self.gravforce = g.calcGravity(self.calcMass)
 
  def __init__(self, x=0.1, y=0.1, z=0.1):
   self.massConst = 0.0234
-  self.mass = (x * z * y) * self.massConst
-
   self.x = x
   self.z = z
   self.y = y
+  self.mass = (self.x * self.z * self.y) * self.massConst
+  self.volume = (self.x * self.z * self.y)
 
   self.vite = 10
   self.isDead = False

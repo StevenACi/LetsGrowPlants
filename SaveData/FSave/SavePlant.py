@@ -2,52 +2,38 @@ import base64
 import pickle
 import encodings
 
+
+def rootRecursion(rootAtts, recursedRoot, parentRoot):
+    ###attributes are vites, heights, parentNames
+    rootAtts[0] += str(recursedRoot.vite) + ","
+    rootAtts[1] += str(recursedRoot.height) + ","
+    rootAtts[2] += str(recursedRoot.name) + ","
+    rootAtts[3] += str(parentRoot.name) + ","
+
+    for c in recursedRoot.children:
+        rootAtts = branchrecursion(rootAtts, c, recursedRoot)
+
+    return rootAtts
+
 def saveRoot(plant):
 
-    rootSave = {'vites': 0, 'lengths': 0, 'numRoots': 0}
-    rootchildrenSave = {'vites': "", 'lengths': "",'numChild': 0}
-
+    rootSave = {'Vitalities': 0, 'Lengths': 0, 'Names': "", 'ParentNames':""}
     roots = plant.roots
-    children = plant.roots[0].children
-
-
-    ## all the root stats, count the number of roots
-    rootCounter = 0
-    rootvites = ""
-    rootlengths = ""
+    rootAtts= ["","","",""]
 
     for r in roots:
-        rootCounter += 1
-        rootvites += str(r.vite) + ","
-        rootlengths += str(r.length) + ","
+        rootAtts[0] += str(r.vite) + ","
+        rootAtts[1] += str(r.length) + ","
+        rootAtts[2] += str(r.name) + ","
+        rootAtts[3] += str(r.name) + ","
 
-    rootSave['vite'] = rootvites
-    rootSave['length'] = rootlengths
+    rootSave["Vitalities"] = rootAtts[0]
+    rootSave["Lengths"] = rootAtts[1]
+    rootSave["Names"] = rootAtts[2]
+    rootSave["ParentNames"] = rootAtts[3]
 
-    ## encode all the child stats to base64 , count the number of children..
-    childCounter = 0
-    childvites = ""
-    childlengths = ""
-
-    for c in children:
-        childCounter += 1
-        childvites += str(c.vite) + ","
-        childlengths += str(c.length) + ","
-
-    rootchildrenSave["vites"] = childvites
-    rootchildrenSave["lengths"] = childlengths
-
-    ##save number of children
-    rootchildrenSave['numChild'] = childCounter
-    rootSave['numRoots'] = rootCounter
-
-    rootSave = rootSave
     pickle_out = open("../SaveData/root.pickle","wb")
     pickle.dump(rootSave, pickle_out)
-    pickle_out.close()
-
-    pickle_out = open("../SaveData/rootchildren.pickle", "wb")
-    pickle.dump(rootchildrenSave, pickle_out)
     pickle_out.close()
 
 def saveStem(plant):
@@ -56,49 +42,42 @@ def saveStem(plant):
     pickle.dump(stemSave, pickle_out)
     pickle_out.close()
 
+
+def branchrecursion(branchatts, recursedbranch, parentbranch):
+    ###attributes are vites, heights, parentNames
+    branchatts[0] += str(recursedbranch.vite) + ","
+    branchatts[1] += str(recursedbranch.height) + ","
+    branchatts[2] += str(recursedbranch.name) + ","
+    branchatts[3] += str(parentbranch) + ","
+    for c in recursedbranch.branches:
+        branchatts = branchrecursion(branchatts, c, recursedbranch.name)
+
+    return branchatts
+
 def saveBranches(plant):
 
-    branchSave = {'vites':0, 'heights':0, 'numBranch':0}
-    branchchildrenSave = {'vites':0, 'heights':0, 'numChildren':0}
-    branches = plant.branches
+    branchSave = {'Vitalities':0, 'Heights':0, 'Names':"",'ParentNames':""}
+    branchAtts = ["","","",""]
+    print(plant.branches)
 
-    ## all the branch stats, count the number of branches
-    branchCounter = 0
-    branchVites = ""
-    branchHeights = ""
-    childrenVites = ""
-    childrenHeights = ""
-    numChildren = ""
+    for b in plant.branches:
+        print(b)
+        branchAtts[0] += str(b.vite) + ","
+        branchAtts[1] += str(b.height) + ","
+        branchAtts[2] += str(b.name) + ","
+        branchAtts[3] += str(b.name) + ","
+        if len(b.branches)>0:
+            for bb in b.branches:
 
-    for b in branches:
+                branchAtts = branchrecursion(branchAtts, bb, b.name)
 
-        branchCounter += 1
-        branchVites += str(b.vite) + ","
-        branchHeights += str(b.height) + ","
-
-        childrenCounter = 0
-
-        for bIndex, c in enumerate(b.branches):
-            childrenVites += str(c.vite) + ","
-            childrenHeights += str(c.height) + ","
-            childrenCounter += 1
-
-        numChildren += str(childrenCounter) + ","
-
-    branchSave['vites'] = branchVites
-    branchSave['heights'] = branchHeights
-    branchSave['numBranch'] = branchCounter
-
-    branchchildrenSave['vites'] = childrenVites
-    branchchildrenSave['heights'] = childrenHeights
-    branchchildrenSave['numChildren'] = numChildren
+    branchSave['Vitalities'] = branchAtts[0]
+    branchSave['Heights'] = branchAtts[1]
+    branchSave['Names'] = branchAtts[2]
+    branchSave['ParentNames'] = branchAtts[3]
 
     pickle_out = open("../SaveData/branch.pickle","wb")
     pickle.dump(branchSave, pickle_out)
-    pickle_out.close()
-
-    pickle_out = open("../SaveData/branchchildren.pickle", "wb")
-    pickle.dump(branchchildrenSave, pickle_out)
     pickle_out.close()
 
 def save(plant):

@@ -3,6 +3,9 @@ import termcolor as c
 
 class Root:
 
+ ##Organizational Stats/Class Variables##
+ rootNum = -1
+
  #Vital Stats
  growF = 0.112
  length = 0
@@ -51,7 +54,7 @@ class Root:
   self.growF = round( self.growF, 3 )
 
  def growChild(self):
-   self.children.append(Root("stump"))
+   self.children.append(Root(stump="stump"))
 
  def grow(self, age):
   #increase age
@@ -76,13 +79,18 @@ class Root:
   prntStr = c.colored((" height: "+str(self.length)+ " grow factor: "+ str(self.growF)),"grey")
   return prntStr
 
- def __init__(self, vite = 100, length=0,  stump=None):
+ def __init__(self, vite = 100, length=0,  stump=None, name=None):
   self.vite = 100
   self.waterPP = 0.100
   self.waterDrain = 0.001
   self.length = 0
   self.growF = 0.112
   self.isDead = False
+
+  if name == None:
+   Root.rootNum += 1
+   self.name = "root_"+(str(Root.rootNum))
+
   if stump is not None:
    self.stump = True
   if stump is None:

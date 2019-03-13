@@ -8,6 +8,8 @@ from Config import SaveData
 
 class Stem:
 
+ ##Organizational Stats/Class Variables##
+ branchNum = -1
  ## Life stats ##
  generation = 0
  age = 0
@@ -170,7 +172,7 @@ class Stem:
    self.age = round(self.age, 1)
 
  ## New Branches
-   if (self.age % 2 == 0) and (self.energyS.water >= 10.00):
+   if (self.age % 2 == 0) and (self.energyS.water >= 10.00)and(self.name =="Stem"):
 
     self.branches.append(Stem(self.age))
 
@@ -228,17 +230,18 @@ class Stem:
    prntStr += "\n"
 
    ## PRINT LEAF ##
-
+      ##=>>,<<==!!!!
 
    ## PRINT BRANCH ##
 
    ## PRINT FOR ROOTS ##
    ##main roots##
-   for rIndex, r in enumerate(self.roots):
-    prntStr += "Main root "+ str(rIndex) + " : " + str(r) +"\n"
+   for r in self.roots:
+    prntStr += r.name + " : " + str(r) +"\n"
+    prntStr += "Children:"
    ##child roots##
-    for cIndex, ch in enumerate(r.children):
-     prntStr += "Child root "+ str(cIndex) + " : " + str(ch) +"\n"
+    for ch in r.children:
+     prntStr +=  ch.name + " : " + str(ch) +"\n\t"
 
    return prntStr
 
@@ -252,7 +255,8 @@ class Stem:
    self.age = age
 
   if name == None:
-   self.name = "Branch"
+   Stem.branchNum += 1
+   self.name = "Branch_"+(str(Stem.branchNum))
   else: self.name = "Stem"
 
   self.thirst = False

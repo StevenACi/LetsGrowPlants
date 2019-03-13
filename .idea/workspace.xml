@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="292015d9-6e00-431a-9b9f-489550d658ad" name="Default Changelist" comment="" />
+    <list default="true" id="292015d9-6e00-431a-9b9f-489550d658ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SaveData/FSave/SaverTemp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Leaf.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Leaf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Root.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Root.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Stem.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Stem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveData/FSave/SavePlant.py" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData/FSave/SavePlant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveData/branch.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData/branch.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveData/branchchildren.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveData/root.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData/root.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveData/rootchildren.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveData/stem.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData/stem.pickle" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,6 +22,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/SaveData/FSave/SaverTemp.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state>
+                    <caret selection-end-line="10" selection-end-column="21" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
     <window id="2">
       <content type="file-editors">
         <state>
@@ -16,8 +46,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/ScratchLog">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="340">
-                    <caret line="20" column="106" selection-start-line="20" selection-start-column="106" selection-end-line="20" selection-end-column="106" />
+                  <state relative-caret-position="357">
+                    <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
                   </state>
                 </provider>
               </entry>
@@ -32,29 +62,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="476">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config/SaveData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SaveData/FSave/SavePlant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-73">
-              <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+            <state relative-caret-position="482">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -63,42 +81,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/encodings/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Models/Leaf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Root.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+            <state relative-caret-position="121">
+              <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/json/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="178" selection-start-line="178" selection-end-line="178" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config/save.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="129" selection-start-column="129" selection-end-column="129" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Models/Stem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="172" column="54" lean-forward="true" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
+            <state relative-caret-position="239">
+              <caret line="174" column="77" selection-start-line="174" selection-start-column="77" selection-end-line="174" selection-end-column="77" />
               <folding>
                 <element signature="e#52#82#0" expanded="true" />
               </folding>
@@ -107,12 +114,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/json/encoder.py">
+        <entry file="file://$PROJECT_DIR$/SaveData/branch.pickle">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SaveData/stem.pickle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="430" selection-start-line="430" selection-end-line="430" />
+            <state relative-caret-position="17">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SaveData/root.pickle">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -132,6 +149,9 @@
       <find>age</find>
       <find>print</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -155,17 +175,18 @@
         <option value="$PROJECT_DIR$/devlog.md" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/ScratchLog" />
-        <option value="$PROJECT_DIR$/Models/Leaf.py" />
         <option value="$PROJECT_DIR$/Config.py" />
         <option value="$PROJECT_DIR$/Logs/log.py" />
         <option value="$PROJECT_DIR$/Config/SaveData.json" />
         <option value="$PROJECT_DIR$/Config/save.json" />
         <option value="$PROJECT_DIR$/Config/SaveData.py" />
-        <option value="$PROJECT_DIR$/Models/Root.py" />
         <option value="$PROJECT_DIR$/Config/SavePlant.py" />
-        <option value="$PROJECT_DIR$/SaveData/FSave/SavePlant.py" />
         <option value="$PROJECT_DIR$/game.py" />
+        <option value="$PROJECT_DIR$/Models/Leaf.py" />
+        <option value="$PROJECT_DIR$/Models/Root.py" />
+        <option value="$PROJECT_DIR$/SaveData/FSave/SaverTemp.py" />
         <option value="$PROJECT_DIR$/Models/Stem.py" />
+        <option value="$PROJECT_DIR$/SaveData/FSave/SavePlant.py" />
       </list>
     </option>
   </component>
@@ -174,6 +195,7 @@
     <option name="width" value="1936" />
     <option name="height" value="1176" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -200,6 +222,12 @@
               <item name="LetsGrowPlants" type="b2602c69:ProjectViewProjectNode" />
               <item name="LetsGrowPlants" type="462c0819:PsiDirectoryNode" />
               <item name="SaveData" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LetsGrowPlants" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LetsGrowPlants" type="462c0819:PsiDirectoryNode" />
+              <item name="SaveData" type="462c0819:PsiDirectoryNode" />
+              <item name="FSave" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LetsGrowPlants" type="b2602c69:ProjectViewProjectNode" />
@@ -342,13 +370,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="0" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1793249" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294347" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.9707602" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34405458" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39961013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -462,23 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScratchLog">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="106" selection-start-line="20" selection-start-column="106" selection-end-line="20" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Leaf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Logs/log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -519,13 +531,6 @@
     <entry file="file://$PROJECT_DIR$/Models/root.pickle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Config/SaveData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="577">
@@ -536,29 +541,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaveData/FSave/SavePlant.py">
+    <entry file="file://$PROJECT_DIR$/SaveData/root.pickle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScratchLog">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Root.py">
+    <entry file="file://$PROJECT_DIR$/SaveData/stem.pickle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveData/branchchildren.pickle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveData/rootchildren.pickle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="103" lean-forward="true" selection-start-column="103" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveData/FSave/SaverTemp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Stem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="172" column="54" lean-forward="true" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
+        <state relative-caret-position="239">
+          <caret line="174" column="77" selection-start-line="174" selection-start-column="77" selection-end-line="174" selection-end-column="77" />
           <folding>
             <element signature="e#52#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveData/branch.pickle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Root.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Leaf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveData/FSave/SavePlant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
