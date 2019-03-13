@@ -33,7 +33,7 @@ def main():
 
   print(plant)
   ##print(elapsedTime)
-  t.sleep(0.5)
+  t.sleep(1)
 main()
 
 

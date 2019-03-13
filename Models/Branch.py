@@ -58,7 +58,7 @@ class Branch:
         prntStr += "\n"
         return prntStr
 
-    def __init__(self, age=None, branches=[], leaves=[], name= None) :
+    def __init__(self, age=None, children=[], leaves=[], name= None) :
         self.energyS = e.energyStorage(water=10)
         self.vite = 10
         if age == None:
@@ -73,5 +73,5 @@ class Branch:
         self.waterDrain = 0.001
         self.height = 0.0
 
-        self.branches = branches
+        self.children = children
         self.leaves = leaves

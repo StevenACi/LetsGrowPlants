@@ -76,7 +76,12 @@ class Root:
     print (c.colored("root is now stump","red"))
 
  def __str__(self):
-  prntStr = c.colored((" height: "+str(self.length)+ " grow factor: "+ str(self.growF)),"grey")
+  prntStr = c.colored((self.name + " height: "+str(self.length)+ " grow factor: "+ str(self.growF)),"grey")
+  prntStr += c.colored("\nChildren:", "grey")
+
+  for s in self.children:
+   prntStr += c.colored(s.name +" height: " + str(s.length) +" grow factor: " +str(s.growF)+"\n\t","grey")
+
   return prntStr
 
  def __init__(self, vite = 100, length=0,  stump=None, name=None):

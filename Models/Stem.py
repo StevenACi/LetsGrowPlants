@@ -210,12 +210,7 @@ class Stem:
         ## PRINT FOR ROOTS ##
         ##main roots##
         for r in self.roots:
-            prntStr += r.name + " : " + str(r) +"\n"
-            prntStr += "Children:"
-            ##child roots##
-            for ch in r.children:
-                prntStr +=  ch.name + " : " + str(ch) +"\n\t"
-
+            print(r)
         return prntStr
 
     def __init__(self, age=None, roots=[], branches=[], leaves=[], name= None) :
