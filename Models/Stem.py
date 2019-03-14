@@ -1,10 +1,8 @@
 #from Models import Root, Seed, Leaf, Fruit, energy
 from Models import energy as e
-from Models import Root as r
 from Models import Leaf as l
 from Models import Branch as br
 import termcolor as c
-from Config import SaveData
 
 
 class Stem:
@@ -41,8 +39,6 @@ class Stem:
 
         for a in self.roots:
             rootUsage += self.GPRecursion(a)
-            for z in a.children:
-                rootUsage += z.calcDrain()
 
         ##BRANCH WATER
         for s in self.branches:
@@ -135,10 +131,11 @@ class Stem:
 
         if (self.age % 2 == 0) and (self.energyS.water >= 20.00) and (self.name == "Stem"):
 
-            self.branches.append(br.Branch(parent=self.name))
+            if self.age <=10:
+                self.branches.append(br.Branch(parent=self.name))
 
-            for b in self.branches:
-                print("Branches " + str(b) + "Name: " + str(b.name))
+                for b in self.branches:
+                    print("Branches " + str(b) + "Name: " + str(b.name))
                 ##for c in b.branches:
                 ##print("SB Leaves: " + c.leaves)
 
@@ -201,8 +198,12 @@ class Stem:
 
         self.grow()
 
-
         self.harvest()
+
+        print(self)
+        for b in self.branches:
+            print(b)
+
 
 
     def __str__(self):

@@ -53,13 +53,14 @@ class Branch:
             self.height += self.growF
             self.height = round(self.height,2)
             self.age = round(self.age, 1)
+     #   if (self.age > 2 and self.height > 2.0 and self.parent == "Stem"):
+     #       self.children.append(Branch(parent=self.name))
 
     def __str__(self):
 
         ## PRINT FOR Branch ##
         prntStr = c.colored(("Branch :: age: "+ str(self.age) + " height: " + str(self.height)+ " parent: " + str(
-            self.parent)),
-                            "green")
+            self.parent)),"green")
         prntStr += "\n"
         return prntStr
 
