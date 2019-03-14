@@ -9,12 +9,17 @@ from Config import SaveData
 
 class Branch:
 
+    branchNum = -1
+
     def Death(self):
         self.isDead = True
         print (c.colored(self.name+" IS DEAD","cyan"))
 
     def calcDrain(self):
-        self.waterDrain = self.height/4
+        if self.waterDrain > 0:
+            self.waterDrain = self.height/4
+        else:
+            self.waterDrain = 0
         return self.waterDrain
 
     def regen(self):
@@ -44,29 +49,31 @@ class Branch:
         self.height = round(self.height,2)
         self.age = round(self.age, 1)
 
-    def harvest(self):
-        for r in self.roots:
-            self.energyS.addWater(r.waterPull())
-        for c in r.children:
-            self.energyS.addWater(c.waterPull())
-
-
     def __str__(self):
 
         ## PRINT FOR Branch ##
-        prntStr = c.colored(("Branch :: age: "+ str(self.age) + " height: " + str(self.height)),"green")
+        prntStr = c.colored(("Branch :: age: "+ str(self.age) + " height: " + str(self.height)+ " parent: " + str(
+            self.parent)),
+                            "green")
         prntStr += "\n"
         return prntStr
 
-    def __init__(self, age=None, children=[], leaves=[], name= None) :
+    def __init__(self, age=None, children=[], leaves=[], parent=[]) :
+
         self.energyS = e.energyStorage(water=10)
         self.vite = 10
+        self.growF = 0
+        self.upkeepMet = True
+
         if age == None:
             self.age = 0
         else:
             self.age = age
+        Branch.branchNum += 1
+        self.name = "Branch"+str(Branch.branchNum)
 
-        self.name = name
+        self.parent = parent
+
 
         self.thirst = False
         self.isDead = False

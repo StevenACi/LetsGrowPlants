@@ -10,7 +10,7 @@ from Config import SaveData
 class Stem:
 
     ##Organizational Stats/Class Variables##
-    branchNum = -1
+
     ##Pacing Nums
     leafPace = 1
 
@@ -18,6 +18,13 @@ class Stem:
     ## Reciprical stats for future ##
     height = 0
     diameter = 0
+
+    def GPRecursion(self,s):
+        usage = 0
+        usage += s.calcDrain()
+        for ss in s.children:
+            usage += self.GPRecursion(ss)
+        return usage
 
     def GrowthPotentials(self):
         #
@@ -31,23 +38,26 @@ class Stem:
         branchUsage = 0
         leafUsage = 0
         fruitUsage = 0
+
         for a in self.roots:
-            rootUsage += a.calcDrain()
+            rootUsage += self.GPRecursion(a)
             for z in a.children:
                 rootUsage += z.calcDrain()
 
         ##BRANCH WATER
         for s in self.branches:
-            branchUsage += s.calcDrain()
-            for ss in s.branches:
-                branchUsage += ss.calcDrain()
+            branchUsage += self.GPRecursion(s)
+
 
         ##STEM WATER
         stemUsage += self.calcDrain()
 
         ##LEAF WATER
         for L in self.leaves:
-            leafUsage += L.calcDrain()
+            leafUsage += self.GPRecursion(L)
+
+
+        ### PLEASE ADD TO BRANCH CLASS
         for s in self.branches:
             for L in s.leaves:
                 leafUsage += L.calcDrain()
@@ -90,7 +100,7 @@ class Stem:
                     s.regen()
                     if s.upkeepMet is False:
                         self.thirst = True
-                    for ss in s.branches:
+                    for ss in s.children:
                         if ss.isDead is not True:
                             ss.upkeepMet = self.energyS.pullWater(ss.waterDrain)
                             ss.regen()
@@ -113,17 +123,32 @@ class Stem:
         self.waterDrain = self.height/4
         return self.waterDrain
 
+    def growLeaves(self):
+        ## New Leaves
+        Stem.leafPace += 1
+        if (self.vite > 20) and (not self.branches):
+            if leafPace % 12 == 0:
+                self.leaves.append(l.Leaf())
+        ##leafs
+
+    def growBranches(self):
+
+        if (self.age % 2 == 0) and (self.energyS.water >= 20.00) and (self.name == "Stem"):
+
+            self.branches.append(br.Branch(age=self.age, parent=self.name))
+
+            for b in self.branches:
+                print("Branches " + str(b) + "Name: " + str(b.name))
+                ##for c in b.branches:
+                ##print("SB Leaves: " + c.leaves)
+
     def grow(self):
         ## growF and height will adjust only if upkeep is met/thirst is false
         self.age += 0.1 ##TIME DRAGS ON...
 
-
         if self.upkeepMet is True:
 
-            ## grow everything.
-            ########
-            ## ADD STATEMENT TO SAY IF NOT STEM THESE FUNCTIONS ARE AN ASPECT OF STEM AGE #########  #    #     #    #
-            ########
+            ## grow everything ##
 
             ##young function
             if self.age <20:
@@ -141,31 +166,24 @@ class Stem:
             self.height = round(self.height,2)
             self.age = round(self.age, 1)
 
-            ## New Branches
-            if (self.age % 2 == 0) and (self.energyS.water >= 0.00)and(self.name =="Stem"):
-                Stem.branchNum += 1
-                newBranchName = "branch" + str(Stem.branchNum)
-                self.branches.append(br.Branch(age = self.age,name=newBranchName))
+            ## Try To Grow new branches
 
-                for b in self.branches:
-                    print("Branches " + str(b) + "Name: "+ str(b.name))
-                    ##for c in b.branches:
-                    ##print("SB Leaves: " + c.leaves)
+            self.growBranches()
 
+           ## TODO: Try to grow new leaves
+        ## TODO: Recursion for grow functions
 
+        for b in self.branches:
+            if b.upkeepMet:
+                b.grow()
         for r in self.roots:
             if r.upkeepMet:
-                r.grow(self.age)
+                r.grow()
             for c in r.children:
                 if c.upkeepMet:
-                    c.grow(self.age)
+                    c.grow()
 
-                ## New Leaves
-                Stem.leafPace += 1
-                if (self.vite > 20) and (not self.branches):
-                    if (leafPace % 12 == 0):
-                        self.leaves.append(l.Leaf())
-                ##leafs
+
 
 
 
@@ -189,8 +207,7 @@ class Stem:
         self.upkeep()
 
         self.grow()
-        for b in self.branches:
-            b.grow()
+
 
         self.harvest()
 
@@ -217,6 +234,10 @@ class Stem:
 
         self.energyS = e.energyStorage(water=10)
         self.vite = 10
+        self.growF = 0
+        self.upkeepMet = True
+
+
         if age == None:
             self.age = 0
         else:
