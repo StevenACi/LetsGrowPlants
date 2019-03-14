@@ -30,24 +30,29 @@ class Branch:
         if self.vite <= 0:
             self.Death()
 
+    def growR(self):
+        self.grow()
+        for c in self.children:
+            c.grow()
 
     def grow(self):
-        ## growF and height will adjust only if upkeep is met/thirst is false
-        self.age += 0.1 ##TIME DRAGS ON...
+        if self.upkeepMet:
+            ## growF and height will adjust only if upkeep is met/thirst is false
+            self.age += 0.1 ##TIME DRAGS ON...
 
-        if self.age <20:
-            self.growF = (self.age/4 * (self.vite / 8)) - self.height
-            self.growF = round(self.growF,3)
-            self.vite = 10 ## set vitality to 10 as a handicap on early game
+            if self.age <20:
+                self.growF = (self.age/4 * (self.vite / 8)) - self.height
+                self.growF = round(self.growF,3)
+                self.vite = 10 ## set vitality to 10 as a handicap on early game
 
-        ##elder function
-        if self.age >= 20:
-            self.growF = (((4 / self.age) * 25) * (self.vite / 8)) - self.height
-            self.growF = round(self.growF, 3)
+            ##elder function
+            if self.age >= 20:
+                self.growF = (((4 / self.age) * 25) * (self.vite / 8)) - self.height
+                self.growF = round(self.growF, 3)
 
-        self.height += self.growF
-        self.height = round(self.height,2)
-        self.age = round(self.age, 1)
+            self.height += self.growF
+            self.height = round(self.height,2)
+            self.age = round(self.age, 1)
 
     def __str__(self):
 

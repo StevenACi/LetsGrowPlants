@@ -27,11 +27,15 @@ def main():
  #game loop
  while 1:
   elapsedTime = round(timeframe(),0)
-
-  plant.update()
+  if plant.isDead == False:
+   plant.update()
+   print(plant)
+  else:
+   print("Ad Astra...")
+   exit(0)
   #SavePlant.save(plant)
 
-  print(plant)
+
   ##print(elapsedTime)
   t.sleep(1)
 main()

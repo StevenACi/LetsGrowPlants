@@ -1,0 +1,41 @@
+FEBRUARY 22 - 2019
+
+   The plant currently grows at a constant rate, as long as it is not thirsty. This seems to make sense,
+and we have done it this way because without chlorophyl logic we cannot properly assess how the plant recieves its 
+directives to allocate its terrestrial growth.
+
+   The main root will spread to include 5 children roots, which will grow at an inverted reciprical function where
+x-axis is the growth, factored by the amount of children it has spawned. This may in fact be existentially accurate..
+ The child roots will grow at a factor determinate of their age, as they do not have the directive to grow children. 
+ It is a similar inverted reciprical function, where growth _should_ slow over time.
+
+_Tree will stop growing at the same rate as the roots, therefore they must contain the same age value as an overall 
+factor towards their maturity level._
+
+MARCH 14 - 2019
+
+   Alot has changed in the program - my main excitement comes from making a functional class that will call recursions
+for all the grow, water usage, and water draining for all the parts of the tree.
+
+   The beauty is the tree will be able
+to live and grow forever, conditions permitting!
+
+   After this, I'll have to finally introduce leaves, which will be able to append to stems or branches, given a generic
+    function. I'm tenative to introduce leaves because I'll have to rewrite alot of the energy usage. Leaves introduce
+    light absorption and chloraphoric production. I'm gonna need a functional sun and light environment. Also this
+    brings the question of whether or not sun and soil water will have to fluctuate, I assume it will. This will be a
+    whole segment of production...
+   Further note, is the idea of making each tree grow uniquely - so that no two trees will be alike. The implementation
+   will come with the leaves. The whole tree relies on its leaves to make decisions. The stem itself will remain pretty
+   generic until we see what the lighting conditions are like. I'll outline them breifly now, for my sake..
+
+   So each environment will have a range of conditions, those on the outside having a smaller probability of occuring,
+   as probability distributions go *haha* . For example, swampy areas have more moisture, less sunlight, desertified
+   areas will have less moisture, more sunlight, northern areas less sunlight and moisture..etc..
+   The Stem, since it is already the controller for the production of everything, will control the movement of branches
+   and leaves. It will also *plan* how to grow depending on the environment **(further research required)**
+
+   My goal from this is to have unique trees depending on which environment, and then within a randomly unfolding
+   environment, the trees will move differently to accomodate waves of weather patterns, and just the unique
+   distribution along the probability arc of these weather algorithms.
+

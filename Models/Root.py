@@ -47,7 +47,12 @@ class Root:
   return pull
 
  def growChild(self):
-   self.children.append(Root(stump="stump"))
+   self.children.append(Root(stump="stump",parent=self))
+
+ def growR(self):
+  self.grow()
+  for c in self.children:
+   c.grow()
 
  def grow(self):
 
@@ -55,33 +60,33 @@ class Root:
   self.age += 0.1
   self.age = round(self.age,1)
 
-  if self.age < 5:
-   self.growF = (self.age * self.age) / 50 / 2 / ((len(self.children)+1)*1.2) ## young function
-  if self.age > 5:
-   self.growF = (self.age * self.age) / 250 / 2 / ((len(self.children) + 1) * 1.2)  ## adult function
-  elif self.stump:
-   if self.age < 5:
-    self.growF = (self.age * self.age) / 50 / 2 / (5 * self.age) ## young function
-   if self.age > 5:
-    self.growF = (self.age * self.age) / 250 / 2 / (5 * self.age) ## young function
+  if self.upkeepMet:
+   if self.stump:
+     self.growF = (self.age * self.age) / 250 / 2 / (5 * self.age) * (self.parent.growF + 1) ## young function
 
-  self.growF = round( self.growF, 3 )
+   elif self.age < 5:
+    self.growF = ((self.age * self.age) / 50 / 2 / ((5 * self.age)*1.2)) * (self.parent.growF + 1) ## young
+    # function
+   elif self.age > 5:
+    self.growF = (self.age * self.age) / 50 / 2 / ((len(self.children) + 1) * 1.2)  ## adult function
 
-  #increase length
-  self.length += self.growF
-  self.length = round(self.length, 3)
 
-  #break if too many children
-  if self.stump:
-   return
-  print(self.age)
-  #child every 'day'
-  if self.age % 1 == 0:
-   self.growChild()
-   ####
-   if len(self.children) >= 5:
-    self.stump = True
-    print (c.colored("root is now stump","red"))
+   self.growF = round( self.growF, 3 )
+
+   #increase length
+   self.length += self.growF
+   self.length = round(self.length, 3)
+
+   #break if too many children
+   if self.stump:
+    return
+   #child every 'day'
+   if self.age % 1 == 0:
+    self.growChild()
+    ####
+    if len(self.children) >= 5:
+     self.stump = True
+     print (c.colored("root is now stump","red"))
 
  def __str__(self):
   prntStr = ""
@@ -92,15 +97,19 @@ class Root:
 
   return prntStr
 
- def __init__(self, vite = 100, length=0,  stump=None, name=None):
+ def __init__(self, vite = 100, length=0,  stump=None, name=None, parent=None):
   self.age = 0
   self.vite = 100
-  self.waterPP = 0.100
+  self.waterPul = 0.100
   self.waterDrain = 0.0
   self.length = 0
   self.growF = 0.112
   self.isDead = False
   self.upkeepMet = True
+
+  if parent == None:
+   self.parent = self
+  else : self.parent = parent
 
   if name == None:
    Root.rootNum += 1

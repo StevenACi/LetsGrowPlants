@@ -135,7 +135,7 @@ class Stem:
 
         if (self.age % 2 == 0) and (self.energyS.water >= 20.00) and (self.name == "Stem"):
 
-            self.branches.append(br.Branch(age=self.age, parent=self.name))
+            self.branches.append(br.Branch(parent=self.name))
 
             for b in self.branches:
                 print("Branches " + str(b) + "Name: " + str(b.name))
@@ -153,7 +153,7 @@ class Stem:
             ##young function
             if self.age <20:
                 self.growF = (self.age/4 * (self.vite / 8)) - self.height
-                self.growF = round(self.growF,3)
+                self.growF = round(self.growF, 3)
                 self.vite = 10 ## set vitality to 10 as a handicap on early game
 
             ##elder function
@@ -174,16 +174,9 @@ class Stem:
         ## TODO: Recursion for grow functions
 
         for b in self.branches:
-            if b.upkeepMet:
-                b.grow()
+                b.growR()
         for r in self.roots:
-            if r.upkeepMet:
-                r.grow()
-            for c in r.children:
-                if c.upkeepMet:
-                    c.grow()
-
-
+                r.growR()
 
 
 
