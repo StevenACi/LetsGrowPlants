@@ -74,34 +74,15 @@ class Stem:
         if self.name == "Stem":
             #roots need to upkeep first, they are most vital
             for r in self.roots:
-                if r.isDead is not True:
-                    r.upkeepMet = self.energyS.pullWater(r.waterDrain)
-                    r.regen()
-                    if r.upkeepMet is False:
-                        self.thirst = True
-                    for c in r.children:
-                        if c.isDead is not True:
-                            c.upkeepMet = self.energyS.pullWater(c.waterDrain)
-                            c.regen()
-                            if c.upkeepMet is False:
-                                self.thirst = True
+                r.upkeep(self.energyS)
 
             #main stem will upkeep
             self.upkeepMet = self.energyS.pullWater(self.waterDrain) ###*******
 
             #stem system will upkeep ##->branches
             for s in self.branches:
-                if s.isDead is not True:
-                    s.upkeepMet = self.energyS.pullWater(s.waterDrain)
-                    s.regen()
-                    if s.upkeepMet is False:
-                        self.thirst = True
-                    for ss in s.children:
-                        if ss.isDead is not True:
-                            ss.upkeepMet = self.energyS.pullWater(ss.waterDrain)
-                            ss.regen()
-                            if ss.upkeepMet is False:
-                                self.thirst= True
+                s.upkeep(self.energyS)
+
 
 
         self.regen()
@@ -132,7 +113,7 @@ class Stem:
         if (self.age % 2 == 0) and (self.energyS.water >= 20.00) and (self.name == "Stem"):
 
             if self.age <=10:
-                self.branches.append(br.Branch(parent=self.name))
+                self.branches.append(br.Branch(parent=self.name,children=[]))
 
                 for b in self.branches:
                     print("Branches " + str(b) + "Name: " + str(b.name))
@@ -155,12 +136,12 @@ class Stem:
 
             ##elder function
             if self.age >= 20:
-                self.growF = (((4 / self.age) * 25) * (self.vite / 8)) - self.height
+                self.growF = (((4 / self.age) * 25) * (self.vite / 8)) - (self.height + self.age)
                 self.growF = round(self.growF, 3)
 
 
             self.height += self.growF
-            self.height = round(self.height,2)
+            self.height = round(self.height,3)
             self.age = round(self.age, 1)
 
             ## Try To Grow new branches
@@ -168,12 +149,15 @@ class Stem:
             self.growBranches()
 
            ## TODO: Try to grow new leaves
-        ## TODO: Recursion for grow functions
+        for L in self.leaves:
+            L.growR()
+
+        ## Recursion for grow functions
 
         for b in self.branches:
-                b.growR()
+                b.update()
         for r in self.roots:
-                r.growR()
+                r.update()
 
 
 
@@ -182,6 +166,8 @@ class Stem:
             self.energyS.addWater(r.waterPull())
             for c in r.children:
                 self.energyS.addWater(c.waterPull())
+
+        ### LEAF PULL GOES HEREZ
 
     def ailment(self):
         ##to add diseases later. disease model will come
