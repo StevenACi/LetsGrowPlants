@@ -53,13 +53,13 @@ class Branch:
             ## growF and height will adjust only if upkeep is met/thirst is false
             self.age += 0.1 ##TIME DRAGS ON...
 
-            if self.age <20:
+            if self.age <10:
                 self.growF = (self.age/4 * (self.vite / 8)) - self.height
                 self.growF = round(self.growF,3)
                 self.vite = 10 ## set vitality to 10 as a handicap on early game
 
             ##elder function
-            if self.age >= 20:
+            if self.age >= 10:
                 self.growF = (((4 / self.age) * 25) * (self.vite / 8)) - (self.height + self.age)
                 self.growF = round(self.growF, 3)
 
