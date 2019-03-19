@@ -59,7 +59,7 @@ class Root:
 
         if self.upkeepMet:
             if self.stump:
-                self.growF = (self.age * self.age) / 150 / 2 ## young function
+                self.growF = (self.age * self.age) / 50 / 2 ## young function
 
             elif self.age < 5:
                 self.growF = (self.age * self.age) / 50 / 2  ## young
@@ -74,6 +74,13 @@ class Root:
             self.length += self.growF
             self.length = round(self.length, 3)
 
+                ####
+            if len(self.children) >= 5:
+                self.stump = True
+                print (c.colored("root is now stump","red"))
+            for d in self.children:
+                d.grow()
+
             #break if too many children
             if self.stump:
                 return
@@ -81,12 +88,7 @@ class Root:
             if self.age % 1 == 0:
                 self.growChild()
 
-                ####
-            if len(self.children) >= 5:
-                self.stump = True
-                print (c.colored("root is now stump","red"))
-            for d in self.children:
-                d.grow()
+
 
     def update(self):
         self.pull = 0
