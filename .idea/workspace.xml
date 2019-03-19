@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="292015d9-6e00-431a-9b9f-489550d658ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Models/Root.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Root.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devlog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/devlog.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,16 +15,16 @@
     <favorites_list name="LetsGrowPlants" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.56473684">
+    <splitter split-orientation="horizontal" split-proportion="0.67526317">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.7854478">
+        <splitter split-orientation="horizontal" split-proportion="0.8075676">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/game.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="421">
-                      <caret line="28" selection-start-line="28" selection-end-line="28" />
+                    <state relative-caret-position="166">
+                      <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
                       <folding>
                         <element signature="e#0#28#0" expanded="true" />
                       </folding>
@@ -31,18 +32,22 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Models/Root.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="513">
-                      <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+                    <state relative-caret-position="479">
+                      <caret line="80" column="29" lean-forward="true" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/devlog.txt">
-                  <provider selected="true" editor-type-id="text-editor" />
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="192">
+                      <caret line="50" column="55" lean-forward="true" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
+                    </state>
+                  </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
@@ -112,7 +117,7 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Models/Branch.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="87">
+                    <state relative-caret-position="1088">
                       <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
                       <folding>
                         <element signature="e#52#82#0" expanded="true" />
@@ -130,7 +135,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Models/Stem.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1921">
+                <state relative-caret-position="2941">
                   <caret line="179" column="48" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
                   <folding>
                     <element signature="e#52#82#0" expanded="true" />
@@ -197,7 +202,6 @@
         <option value="$PROJECT_DIR$/SaveData/FSave/SavePlant.py" />
         <option value="$PROJECT_DIR$/sun.py" />
         <option value="$PROJECT_DIR$/devlog.md" />
-        <option value="$PROJECT_DIR$/devlog.txt" />
         <option value="$PROJECT_DIR$/Environment/Environment.py" />
         <option value="$PROJECT_DIR$/Environment/Soil.py" />
         <option value="$PROJECT_DIR$/game.py" />
@@ -208,6 +212,7 @@
         <option value="$PROJECT_DIR$/Models/Branch.py" />
         <option value="$PROJECT_DIR$/Models/Stem.py" />
         <option value="$PROJECT_DIR$/Models/Root.py" />
+        <option value="$PROJECT_DIR$/devlog.txt" />
       </list>
     </option>
   </component>
@@ -398,7 +403,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285578" />
       <window_info anchor="bottom" x="0" y="23" width="1680" height="987" id="Run" maximized="true" order="2" side_tool="true" type="WINDOWED" visible="true" weight="0.70200574" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.19675262" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.6790831" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
@@ -433,12 +438,17 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="self.children[0]" />
+        <watch expression="self.children[0]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>self.children[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>roots</expression-string>
         <language-id>Python</language-id>
@@ -605,17 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devlog.txt">
-      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="459">
-            <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Time.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -656,7 +655,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Branch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
+        <state relative-caret-position="1088">
           <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
           <folding>
             <element signature="e#52#82#0" expanded="true" />
@@ -674,20 +673,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Root.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="80" column="29" lean-forward="true" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="166">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Root.py">
+    <entry file="file://$PROJECT_DIR$/devlog.txt">
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="459">
+            <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="192">
+          <caret line="50" column="55" lean-forward="true" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
         </state>
       </provider>
     </entry>

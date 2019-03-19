@@ -76,8 +76,9 @@ class Root:
 
                 ####
             if len(self.children) >= 5:
+                if self.stump is False:
+                    print(c.colored("root is now stump", "red"))
                 self.stump = True
-                print (c.colored("root is now stump","red"))
             for d in self.children:
                 d.grow()
 

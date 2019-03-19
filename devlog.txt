@@ -30,7 +30,7 @@ to live and grow forever, conditions permitting!
    generic until we see what the lighting conditions are like. I'll outline them breifly now, for my sake..
 
    So each environment will have a range of conditions, those on the outside having a smaller probability of occuring,
-   as probability distributions go *haha* . For example, swampy areas have more moisture, less sunlight, desertified
+   (as probability distributions go). For example, swampy areas have more moisture, less sunlight, desertified
    areas will have less moisture, more sunlight, northern areas less sunlight and moisture..etc..
    The Stem, since it is already the controller for the production of everything, will control the movement of branches
    and leaves. It will also *plan* how to grow depending on the environment **(further research required)**
@@ -39,3 +39,13 @@ to live and grow forever, conditions permitting!
    environment, the trees will move differently to accomodate waves of weather patterns, and just the unique
    distribution along the probability arc of these weather algorithms.
 
+
+MARCH 19 - 2019
+
+    I have adjusted growth logic to adhere to the amount of Water being fed into the plant. I have yet to test whether
+    the plant will survive given intermiddent water levels. This is the next thing I have to test..
+    The plant's growth is now fully dependant on the growth factor of the Roots. Therefore the only thing I have to
+    adjust to normalize the values is The single 'grow' function in Root.py.
+    Branch Water Usage estimation : .9% rounding error
+    Stem Water Usage estimation :  .8% rounding error.
+    ^ I wonder if these will affect me down the line...
