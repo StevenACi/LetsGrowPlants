@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/Models/Branch.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Branch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Root.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Root.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Stem.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Stem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/energy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/energy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/World/Environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/World/Environment.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,9 +16,9 @@
     <favorites_list name="LetsGrowPlants" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.9">
+    <splitter split-orientation="horizontal" split-proportion="0.7489474">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.45465183">
+        <splitter split-orientation="horizontal" split-proportion="0.54149085">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
@@ -38,8 +36,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Models/Root.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="316">
-                      <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+                    <state relative-caret-position="350">
+                      <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
                     </state>
                   </provider>
                 </entry>
@@ -116,8 +114,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Models/Branch.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="520">
-                      <caret line="71" column="37" lean-forward="true" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+                    <state relative-caret-position="162">
+                      <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
                       <folding>
                         <element signature="e#52#82#0" expanded="true" />
                       </folding>
@@ -134,8 +132,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Models/Stem.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="158" column="46" selection-start-line="158" selection-start-column="46" selection-end-line="158" selection-end-column="46" />
+                <state relative-caret-position="289">
+                  <caret line="179" column="48" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
                   <folding>
                     <element signature="e#52#82#0" expanded="true" />
                   </folding>
@@ -210,8 +208,8 @@
         <option value="$PROJECT_DIR$/Models/energy.py" />
         <option value="$PROJECT_DIR$/World/Environment.py" />
         <option value="$PROJECT_DIR$/Models/Branch.py" />
-        <option value="$PROJECT_DIR$/Models/Root.py" />
         <option value="$PROJECT_DIR$/Models/Stem.py" />
+        <option value="$PROJECT_DIR$/Models/Root.py" />
       </list>
     </option>
   </component>
@@ -395,15 +393,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="0" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.15473685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285578" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1680" height="987" id="Run" maximized="true" order="2" side_tool="true" type="WINDOWED" visible="true" weight="0.70200574" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.17096466" />
+      <window_info anchor="bottom" x="0" y="23" width="1680" height="987" id="Run" maximized="true" order="2" side_tool="true" type="WINDOWED" visible="true" weight="0.70200574" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.23782235" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
@@ -655,16 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Branch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="71" column="37" lean-forward="true" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
-          <folding>
-            <element signature="e#52#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/energy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -676,6 +663,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Branch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+          <folding>
+            <element signature="e#52#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -691,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Root.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="350">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
         </state>
       </provider>
     </entry>

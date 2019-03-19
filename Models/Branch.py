@@ -49,10 +49,10 @@ class Branch:
         self.noChild = False
 
     def grow(self, water):
+        self.age += 0.1  ##TIME DRAGS ON...
+        self.age = round(self.age, 1)
         if self.upkeepMet:
             ## growF and height will adjust only if upkeep is met/thirst is false
-            self.age += 0.1 ##TIME DRAGS ON...
-            self.age = round(self.age, 1)
 
             if len(self.children) > 0:
                 childWater = (water/2) / len(self.children)
@@ -62,12 +62,12 @@ class Branch:
 
 
             if self.age <10:
-                self.growF = water / (self.height * 0.5) ## height will be replaced by volume
+                self.growF = water / 4 ## height will be replaced by volume
                 self.vite = 10 ## set vitality to 10 as a handicap on early game
 
             ##elder function
             if self.age >= 10:
-                self.growF = water / (self.height * 0.5)
+                self.growF = water / 4
 
             self.height += self.growF
             self.height = round(self.height,2)

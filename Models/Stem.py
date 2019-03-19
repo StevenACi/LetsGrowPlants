@@ -71,10 +71,10 @@ class Stem:
         ##count number of roots
         cutLevel = waterLvl/3
 
-        self.stemWGiven = cutLevel
+        self.stemWGiven = cutLevel / 4
 
         if len(self.branches)>0:
-            self.branchWGiven = cutLevel/len(self.branches)
+            self.branchWGiven = (cutLevel/len(self.branches)) / 4
         else: self.branchWGiven = 0
 
         self.rootWGiven = cutLevel/len(self.roots)
@@ -100,8 +100,6 @@ class Stem:
             #stem system will upkeep ##->branches
             for s in self.branches:
                 s.upkeep(self.energyS)
-
-
 
         self.regen()
 
@@ -141,6 +139,7 @@ class Stem:
     def grow(self, water):
         ## growF and height will adjust only if upkeep is met/thirst is false
         self.age += 0.1 ##TIME DRAGS ON...
+        self.age = round(self.age, 1)
 
         if self.upkeepMet is True:
 
@@ -148,16 +147,16 @@ class Stem:
 
             ##young function
             if self.age <20:
-                self.growF = water / (self.height * 0.5) ## height will be replaced by volume
+                self.growF = water / 4## height will be replaced by volume
                 self.vite = 10 ## set vitality to 10 as a handicap on early game
 
             ##elder function
             if self.age >= 20:
-                self.growF = water / (self.height * 0.5) ## height will be replaced by volume
+                self.growF = water / 4 ## height will be replaced by volume
 
             self.height += self.growF
             self.height = round(self.height,3)
-            self.age = round(self.age, 1)
+
 
             ## Try To Grow new branches
 
@@ -172,15 +171,13 @@ class Stem:
         for b in self.branches:
                 b.update(self.branchWGiven)
         for r in self.roots:
-                r.update(self.rootWGiven)
+                r.update()
 
 
 
     def harvest(self):
         for r in self.roots:
             self.energyS.addWater(r.waterPull())
-            for c in r.children:
-                self.energyS.addWater(c.waterPull())
 
         ### LEAF PULL GOES HEREZ
 
@@ -195,8 +192,9 @@ class Stem:
 
         self.GrowthPotentials()
 
-        self.AllocateWater()
         self.upkeep()
+
+        self.AllocateWater()
 
         self.grow(self.stemWGiven)
 

@@ -42,45 +42,33 @@ class Root:
         self.waterPul = self.length * 4
         return self.waterPul
 
-    def WPRecursion(self,r):
-        pull = self.calcPull()
-        for c in r.children:
-            pull += self.WPRecursion(c)
-        return pull
-
     def waterPull(self):
-        pull = self.calcPull()
+        self.pull += self.calcPull()
         for r in self.children:
-            pull += self.WPRecursion(r)
-        return pull
+            self.pull += r.waterPull()
+        return self.pull
 
     def growChild(self):
         self.children.append(Root(stump="stump",parent=self,children=[]))
 
-    def grow(self, water):
+    def grow(self):
 
         #increase age
         self.age += 0.1
         self.age = round(self.age,1)
 
-        if len(self.children) > 0:
-            childWater = (water / 2) / len(self.children)
-            water = water / 2
-        else:
-            childWater = 0
-
         if self.upkeepMet:
             if self.stump:
-                self.growF = water / (self.length * 0.5) ## height will be replaced by volume ## young function
+                self.growF = (self.age * self.age) / 150 / 2 ## young function
 
             elif self.age < 5:
-                self.growF = water / (self.length * 0.5) ## height will be replaced by volume## young
+                self.growF = (self.age * self.age) / 50 / 2  ## young
                 # function
             elif self.age > 5:
-                self.growF = water / (self.length * 0.5) ## height will be replaced by volume ## adult function
+                self.growF = (self.age * self.age) / 50 / 2   ## adult function
 
 
-            self.growF = round(self.growF, 3 )
+            self.growF = round( self.growF, 3 )
 
             #increase length
             self.length += self.growF
@@ -97,12 +85,12 @@ class Root:
             if len(self.children) >= 5:
                 self.stump = True
                 print (c.colored("root is now stump","red"))
+            for d in self.children:
+                d.grow()
 
-            for c in self.children:
-                c.grow(childWater)
-
-    def update(self, givenWater):
-        self.grow(givenWater)
+    def update(self):
+        self.pull = 0
+        self.grow()
 
 
     def __str__(self):
@@ -118,6 +106,7 @@ class Root:
         self.age = 0
         self.vite = 100
         self.waterPul = 0.100
+        self.pull = 0
         self.waterDrain = 0.0
         self.length = 0.01
         self.growF = 0.112
