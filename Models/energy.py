@@ -49,6 +49,15 @@ class energyStorage:
    self.chlorophyl -= 0.5
    return 0.5
 
+ def getWater(self):
+  return self.water
+
+ def getLight(self):
+  return self.light
+
+ def getChlorophyl(self):
+  return self.chlorophyl
+
  def pullWater(self,ml):
   if self.water <= 5.00:
    print (c.colored('NULL PULL: water levels critical',"red"))

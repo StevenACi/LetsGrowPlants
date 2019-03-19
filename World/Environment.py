@@ -20,8 +20,6 @@ class Environment:
     rainV = 50
 
 
-
-
     #### SUN ####
     ### General Sunniness ####
     sunA = 100

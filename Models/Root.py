@@ -57,28 +57,30 @@ class Root:
     def growChild(self):
         self.children.append(Root(stump="stump",parent=self,children=[]))
 
-    def growR(self):
-        for c in self.children:
-            c.grow()
-
-    def grow(self):
+    def grow(self, water):
 
         #increase age
         self.age += 0.1
         self.age = round(self.age,1)
 
+        if len(self.children) > 0:
+            childWater = (water / 2) / len(self.children)
+            water = water / 2
+        else:
+            childWater = 0
+
         if self.upkeepMet:
             if self.stump:
-                self.growF = (self.age * self.age) / 250 / 2 / (5 * self.age) * (self.parent.growF + 1) ## young function
+                self.growF = water / (self.length * 0.5) ## height will be replaced by volume ## young function
 
             elif self.age < 5:
-                self.growF = ((self.age * self.age) / 50 / 2 / ((5 * self.age)*1.2)) * (self.parent.growF + 1) ## young
+                self.growF = water / (self.length * 0.5) ## height will be replaced by volume## young
                 # function
             elif self.age > 5:
-                self.growF = (self.age * self.age) / 50 / 2 / ((len(self.children) + 1) * 1.2)  ## adult function
+                self.growF = water / (self.length * 0.5) ## height will be replaced by volume ## adult function
 
 
-            self.growF = round( self.growF, 3 )
+            self.growF = round(self.growF, 3 )
 
             #increase length
             self.length += self.growF
@@ -95,10 +97,12 @@ class Root:
             if len(self.children) >= 5:
                 self.stump = True
                 print (c.colored("root is now stump","red"))
-            self.growR()
 
-    def update(self):
-        self.grow()
+            for c in self.children:
+                c.grow(childWater)
+
+    def update(self, givenWater):
+        self.grow(givenWater)
 
 
     def __str__(self):
@@ -115,7 +119,7 @@ class Root:
         self.vite = 100
         self.waterPul = 0.100
         self.waterDrain = 0.0
-        self.length = 0
+        self.length = 0.01
         self.growF = 0.112
         self.isDead = False
         self.upkeepMet = True

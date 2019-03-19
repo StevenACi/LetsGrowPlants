@@ -57,11 +57,29 @@ class Stem:
         for s in self.branches:
             for L in s.leaves:
                 leafUsage += L.calcDrain()
+
+        self.plantUsage = rootUsage + branchUsage + stemUsage + leafUsage
+
         print (c.colored("Water Usage ::","blue"))
         print (c.colored("Roots: " + str(rootUsage),"blue"))
         print (c.colored("Stem: " + str(stemUsage),"blue"))
         print (c.colored("Branches: " + str(branchUsage),"blue"))
         print (c.colored("Leaves: " + str(leafUsage),"blue"))
+
+    def AllocateWater(self):
+        waterLvl = self.energyS.getWater() - self.plantUsage
+        ##count number of roots
+        cutLevel = waterLvl/3
+
+        self.stemWGiven = cutLevel
+
+        if len(self.branches)>0:
+            self.branchWGiven = cutLevel/len(self.branches)
+        else: self.branchWGiven = 0
+
+        self.rootWGiven = cutLevel/len(self.roots)
+
+
 
     def Death(self):
         self.isDead = True
@@ -104,7 +122,7 @@ class Stem:
         ## New Leaves
         Stem.leafPace += 1
         if (self.vite > 20) and (not self.branches):
-            if leafPace % 12 == 0:
+            if Stem.leafPace % 12 == 0:
                 self.leaves.append(l.Leaf())
         ##leafs
 
@@ -120,7 +138,7 @@ class Stem:
                 ##for c in b.branches:
                 ##print("SB Leaves: " + c.leaves)
 
-    def grow(self):
+    def grow(self, water):
         ## growF and height will adjust only if upkeep is met/thirst is false
         self.age += 0.1 ##TIME DRAGS ON...
 
@@ -130,15 +148,12 @@ class Stem:
 
             ##young function
             if self.age <20:
-                self.growF = (self.age/4 * (self.vite / 8)) - self.height
-                self.growF = round(self.growF, 3)
+                self.growF = water / (self.height * 0.5) ## height will be replaced by volume
                 self.vite = 10 ## set vitality to 10 as a handicap on early game
 
             ##elder function
             if self.age >= 20:
-                self.growF = (((4 / self.age) * 25) * (self.vite / 8)) - (self.height + self.age)
-                self.growF = round(self.growF, 3)
-
+                self.growF = water / (self.height * 0.5) ## height will be replaced by volume
 
             self.height += self.growF
             self.height = round(self.height,3)
@@ -155,9 +170,9 @@ class Stem:
         ## Recursion for grow functions
 
         for b in self.branches:
-                b.update()
+                b.update(self.branchWGiven)
         for r in self.roots:
-                r.update()
+                r.update(self.rootWGiven)
 
 
 
@@ -180,9 +195,10 @@ class Stem:
 
         self.GrowthPotentials()
 
+        self.AllocateWater()
         self.upkeep()
 
-        self.grow()
+        self.grow(self.stemWGiven)
 
         self.harvest()
 
@@ -216,7 +232,7 @@ class Stem:
         self.vite = 10
         self.growF = 0
         self.upkeepMet = True
-
+        self.height = 0.01
 
         if age == None:
             self.age = 0

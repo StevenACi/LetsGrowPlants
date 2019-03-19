@@ -48,20 +48,26 @@ class Branch:
 
         self.noChild = False
 
-    def grow(self):
+    def grow(self, water):
         if self.upkeepMet:
             ## growF and height will adjust only if upkeep is met/thirst is false
             self.age += 0.1 ##TIME DRAGS ON...
+            self.age = round(self.age, 1)
+
+            if len(self.children) > 0:
+                childWater = (water/2) / len(self.children)
+                water = water / 2
+            else:
+                childWater = 0
+
 
             if self.age <10:
-                self.growF = (self.age/4 * (self.vite / 8)) - self.height
-                self.growF = round(self.growF,3)
+                self.growF = water / (self.height * 0.5) ## height will be replaced by volume
                 self.vite = 10 ## set vitality to 10 as a handicap on early game
 
             ##elder function
             if self.age >= 10:
-                self.growF = (((4 / self.age) * 25) * (self.vite / 8)) - (self.height + self.age)
-                self.growF = round(self.growF, 3)
+                self.growF = water / (self.height * 0.5)
 
             self.height += self.growF
             self.height = round(self.height,2)
@@ -71,13 +77,13 @@ class Branch:
                 self.noChild = True
 
             for c in self.children:
-                c.grow()
+                c.grow(childWater)
 
      #   if (self.age > 2 and self.height > 2.0 and self.parent == "Stem"):
      #       self.children.append(Branch(parent=self.name))
 
-    def update(self):
-        self.grow()
+    def update(self, givenWater):
+        self.grow(givenWater)
         self.growChild()
 
         """
@@ -105,6 +111,7 @@ class Branch:
         self.growF = 0
         self.upkeepMet = True
         self.noChild = False
+        self.height = 0.01
 
         if age == None:
             self.age = 0
@@ -119,7 +126,6 @@ class Branch:
         self.thirst = False
         self.isDead = False
         self.waterDrain = 0.001
-        self.height = 0.0
 
         self.children = children
         self.leaves = leaves
