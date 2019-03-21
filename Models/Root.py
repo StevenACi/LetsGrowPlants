@@ -1,5 +1,5 @@
 import termcolor as c
-
+from World import Soil
 
 class Root:
 
@@ -37,9 +37,8 @@ class Root:
             for c in self.children:
                 c.upkeep(energyGen)
 
-
     def calcPull(self):
-        self.waterPul = self.length * 4
+        self.waterPul = self.length * 4 * (Soil.Soil.moisture * 0.01)
         return self.waterPul
 
     def waterPull(self):

@@ -9,24 +9,39 @@ class Soil:
 
 
     def soilDry(self,sun):
-        self.moisture -= sun / 3 ##???
+        Soil.moisture -= sun/2 ##???
 
     def soilAbsorption(self,rain):
-        self.moisture += rain
+        Soil.moisture += rain
+
+
+    ##unused
+    def drainMoisture(self,drain):
+        ##attempts to drain as much as possible
+        drained = 0
+        if Soil.moisture >= drain:
+            drained = drain
+            Soil.moisture -= drain
+        elif drain > Soil.moisture:
+            drained = Soil.moisture
+            Soil.moisture = 0
+        return drained
 
     def update(self,rain,sun):
-        self.yesterdayMoisture = self.moisture
+        self.yesterdayMoisture = Soil.moisture
 
         self.soilAbsorption(rain)
         self.soilDry(sun)
-        self.moisture -= self.yesterdayMoisture
+        Soil.moisture -= self.yesterdayMoisture
+        if Soil.moisture < 0 :
+            Soil.moisture = 0
         print(self)
 
     def __str__(self):
         string =""
-        string += "Soil Moisture today: "+ str(self.moisture)
+        string += "Soil Moisture today: "+ str(Soil.moisture)
         return string
 
     def __init__(self):
-        self.moisture = 0
+        Soil.moisture = 0
         self.yesterdayMoisture = 0

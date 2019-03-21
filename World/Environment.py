@@ -30,7 +30,7 @@ class Environment:
         seed = random.random() * 100
         volai = random.random() * self.rainV
         self.today[0] = self.rainA * ((seed/100)*2) ## even dispersion around the alpha
-        self.today[0] = self.rainA * ( (volai/self.rainV) * 2)
+        self.today[0] = self.rainA * (volai/self.rainV * 2)
         return self.today[0]
 
     def sunlight(self):
