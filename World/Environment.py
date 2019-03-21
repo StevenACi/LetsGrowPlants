@@ -15,7 +15,7 @@ class Environment:
 
     #### RAIN ####
     #### General Raininess ###
-    rainA = 100
+    rainA = 1000
     ## volatility $$
     rainV = 50
 

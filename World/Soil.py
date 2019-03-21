@@ -32,8 +32,7 @@ class Soil:
 
         self.soilAbsorption(rain)
         self.soilDry(sun)
-        Soil.moisture -= self.yesterdayMoisture
-        if Soil.moisture < 0 :
+        if Soil.moisture < 0:
             Soil.moisture = 0
         print(self)
 

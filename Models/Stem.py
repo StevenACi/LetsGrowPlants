@@ -67,7 +67,7 @@ class Stem:
         print (c.colored("Leaves: " + str(leafUsage),"blue"))
 
     def AllocateWater(self):
-        waterLvl = self.energyS.getWater() - self.plantUsage
+        waterLvl = self.energyS.getWater() - (self.plantUsage * 4)
         ##count number of roots
         cutLevel = waterLvl/3
 
@@ -143,18 +143,26 @@ class Stem:
 
         if self.upkeepMet is True:
 
+            MAX_GROW_F = (self.age * self.height) / 16
             ## grow everything ##
 
             ##young function
             if self.age <20:
-                self.growF = water / 4## height will be replaced by volume
+                self.growF = water / 4 ## height will be replaced by volume
                 self.vite = 10 ## set vitality to 10 as a handicap on early game
 
             ##elder function
             if self.age >= 20:
                 self.growF = water / 4 ## height will be replaced by volume
 
-            self.height += self.growF
+            if self.growF <= MAX_GROW_F:
+                self.height += self.growF
+            else:
+                self.growF = MAX_GROW_F
+                self.height += self.growF
+                print("MAX GROW REACHED STEM")
+
+
             self.height = round(self.height,3)
 
 
@@ -173,8 +181,6 @@ class Stem:
         for r in self.roots:
                 r.update()
 
-
-
     def harvest(self):
         for r in self.roots:
             self.energyS.addWater(r.waterPull())
@@ -190,15 +196,16 @@ class Stem:
 
         print (c.colored(("water levels: ", self.energyS.water),"red"))
 
+        self.harvest()
         self.GrowthPotentials()
 
         self.upkeep()
 
         self.AllocateWater()
-
+        print(self.stemWGiven)
         self.grow(self.stemWGiven)
 
-        self.harvest()
+
 
         print(self)
         for b in self.branches:

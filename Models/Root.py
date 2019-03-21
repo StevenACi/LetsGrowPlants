@@ -27,7 +27,7 @@ class Root:
                 self.isDead = True
 
     def calcDrain(self):
-        self.waterDrain = self.length/4
+        self.waterDrain = self.length/8
         return self.waterDrain
 
     def upkeep(self,energyGen):
@@ -38,8 +38,9 @@ class Root:
                 c.upkeep(energyGen)
 
     def calcPull(self):
-        self.waterPul = self.length * 4 * (Soil.Soil.moisture * 0.01)
-        return self.waterPul
+        self.waterPul = self.length * 16
+        self.waterPul = Soil.Soil.drainMoisture(Soil.Soil(),self.waterPul)
+        return self.waterPul * 16
 
     def waterPull(self):
         self.pull += self.calcPull()
@@ -57,20 +58,20 @@ class Root:
         self.age = round(self.age,1)
 
         if self.upkeepMet:
+
             if self.stump:
-                self.growF = (self.age * self.age) / 50 / 2 ## young function
+                self.growF = (self.age) /25 ## young function
 
             elif self.age < 5:
-                self.growF = (self.age * self.age) / 50 / 2  ## young
+                self.growF =(self.age) /25 ## young
                 # function
             elif self.age > 5:
-                self.growF = (self.age * self.age) / 50 / 2   ## adult function
-
+                self.growF = (self.age) /25  ## adult function
 
             self.growF = round( self.growF, 3 )
 
-            #increase length
             self.length += self.growF
+
             self.length = round(self.length, 3)
 
                 ####
@@ -87,8 +88,6 @@ class Root:
             # child every 'day'
             if self.age % 1 == 0:
                 self.growChild()
-
-
 
     def update(self):
         self.pull = 0
@@ -110,7 +109,7 @@ class Root:
         self.waterPul = 0.100
         self.pull = 0
         self.waterDrain = 0.0
-        self.length = 0.01
+        self.length = 0.1
         self.growF = 0.112
         self.isDead = False
         self.upkeepMet = True
