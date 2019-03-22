@@ -143,26 +143,22 @@ class Stem:
 
         if self.upkeepMet is True:
 
-            MAX_GROW_F = (self.age * self.height) / 16
+            MAX_GROW_F = (self.age * self.height) / 16 * 100000
             ## grow everything ##
 
             ##young function
-            if self.age <20:
-                self.growF = water / 4 ## height will be replaced by volume
+            if self.age <4:
+                self.growF = (self.age/4) * (self.vite / 8) * (water / 4) / self.height ## height will be replaced by
+                # volume
                 self.vite = 10 ## set vitality to 10 as a handicap on early game
 
             ##elder function
-            if self.age >= 20:
-                self.growF = water / 4 ## height will be replaced by volume
+            if self.age >= 4:
+                self.growF = ((self.age/8) * (self.vite / 15) * (water / 8)) / (self.height * 3) ## height will be
+                # replaced
+                # by volume
 
-            if self.growF <= MAX_GROW_F:
-                self.height += self.growF
-            else:
-                self.growF = MAX_GROW_F
-                self.height += self.growF
-                print("MAX GROW REACHED STEM")
-
-
+            self.height += self.growF
             self.height = round(self.height,3)
 
 
@@ -240,7 +236,7 @@ class Stem:
         self.height = 0.01
 
         if age == None:
-            self.age = 0
+            self.age = 0.1
         else:
             self.age = age
 

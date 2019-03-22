@@ -15,7 +15,7 @@ class Soil:
         Soil.moisture += rain
 
 
-    ##unused
+    ##unused, currently drains whatever it can
     def drainMoisture(self,drain):
         ##attempts to drain as much as possible
         drained = 0
@@ -25,7 +25,7 @@ class Soil:
         elif drain > Soil.moisture:
             drained = Soil.moisture
             Soil.moisture = 0
-        return drained
+        return drain
 
     def update(self,rain,sun):
         self.yesterdayMoisture = Soil.moisture

@@ -38,9 +38,9 @@ class Root:
                 c.upkeep(energyGen)
 
     def calcPull(self):
-        self.waterPul = self.length * 16
+        self.waterPul = self.length/4
         self.waterPul = Soil.Soil.drainMoisture(Soil.Soil(),self.waterPul)
-        return self.waterPul * 16
+        return self.waterPul
 
     def waterPull(self):
         self.pull += self.calcPull()
@@ -60,13 +60,13 @@ class Root:
         if self.upkeepMet:
 
             if self.stump:
-                self.growF = (self.age) /25 ## young function
+                self.growF = (self.age/4) * (self.vite / 8) / self.length ## young function
 
             elif self.age < 5:
-                self.growF =(self.age) /25 ## young
+                self.growF =(self.age/4) * (self.vite / 8) / self.length ## young
                 # function
             elif self.age > 5:
-                self.growF = (self.age) /25  ## adult function
+                self.growF = (self.age/4) * (self.vite / 8) / self.length  ## adult function
 
             self.growF = round( self.growF, 3 )
 
