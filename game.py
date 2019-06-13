@@ -2,6 +2,7 @@ from Models import Stem as s
 from Models import Root as r
 import time as t
 import Time
+import os
 originTime = t.time()
 elapsedTime = t.time()
 from SaveData.FSave import SavePlant

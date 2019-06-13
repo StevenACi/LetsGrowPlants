@@ -52,7 +52,6 @@ class Stem:
         for L in self.leaves:
             leafUsage += self.GPRecursion(L)
 
-
         ### PLEASE ADD TO BRANCH CLASS
         for s in self.branches:
             for L in s.leaves:
