@@ -1,4 +1,9 @@
 
+
+<h1>Look at devlog for better
+information about what we have currently.
+
+
 CLASSES:
 Conventions:
  __init__ function will *always* be the last function called, as it needs to reference other things in the class.

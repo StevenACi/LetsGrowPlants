@@ -57,7 +57,7 @@ class Environment:
 
     def __str__(self):
         string = ""
-        string += "World 01 :\n"
+        string += "World 01 :: Day "+str(self.day)+"\n"
         string += "Average Rain Levels: " + str(self.rainA) + " ml\n"
         string += "Average Sun Levels: " + str(self.sunA) + " kJl\n"
         string += "Today's Rain: " + str(self.today[0])
