@@ -6,8 +6,7 @@ information about what we have currently.</h3>
 
 CLASSES:
 Conventions:
- __init__ function will *always* be the last function called, as it needs to reference other things in the class.
- Above init is always the __str__ function, which will never have to be called in __init__
+...
 
 NOTES FOR DIFFERENT CLASSES:
 
