@@ -15,8 +15,7 @@ NOTES FOR DIFFERENT CLASSES:
 FACETS: The different parts that will make up what we call a "plant"
 
 
-ENERGY PULL: for now is a constant but later on will be a factor of height so we can determine the proper dispersion 
-of water.
+ENERGY PULL: Upkeep is a factor of the size of the appendage
 
 ENTROPY:
  PLANT class will call entropy functions in all of its parts. Each facet will
