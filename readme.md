@@ -12,9 +12,6 @@ NOTES FOR DIFFERENT CLASSES:
 
 
 
-FACETS: The different parts that will make up what we call a "plant"
-
-
 ENERGY PULL: Upkeep is a factor of the size of the appendage
 
 ENTROPY:
