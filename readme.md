@@ -1,14 +1,5 @@
 
 
-<h3>Look at devlog for better
-information about what we have currently.</h3>
-
-
-CLASSES:
-Conventions:
-...
-
-NOTES FOR DIFFERENT CLASSES:
 
 
 ENERGY PULL: Upkeep is a factor of the (size) of the appendage ?
