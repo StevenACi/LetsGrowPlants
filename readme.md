@@ -11,11 +11,7 @@ Conventions:
 NOTES FOR DIFFERENT CLASSES:
 
 
-
-ENERGY PULL: Upkeep is a factor of the size of the appendage
-
-ENTROPY:
- PLANT class will call entropy functions in all of its parts. Each facet will
+ENERGY PULL: Upkeep is a factor of the (size) of the appendage ?
 
 ROOTS:
 
@@ -29,5 +25,9 @@ R1:
  we model the growth factor by the age of the plant, understanding if it is a young plant it will grow exponentially
  faster than an adult plant. This factor is *loosely* modelled at 5:1. We will likely have to develop a third, 
  'mature' age which will show even slower root growth.
+ 
+ 
+ENTROPY:
+ PLANT calls mass-entropy functions in all of its parts
  
  
