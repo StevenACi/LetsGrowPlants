@@ -18,7 +18,4 @@ R1:
  'mature' age which will show even slower root growth.
  
  
-ENTROPY:
- PLANT calls mass-entropy functions in all of its parts
- 
  
